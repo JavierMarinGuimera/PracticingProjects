@@ -1,7 +1,41 @@
 {
     "folders": [
         {
+            "name": "tests",
+            "path": "tests"
+        },
+        {
+            "name": "to-do-list",
             "path": "to-do-list"
+        },
+        {
+            "name": "chat",
+            "path": "chat"
+        },
+        {
+            "name": "vue_webapp",
+            "path": "vue_webapp"
         }
-    ]
+    ],
+    "settings": {
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#94ffdb",
+            "activityBar.activeBorder": "#d480ff",
+            "activityBar.background": "#94ffdb",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#d480ff",
+            "activityBarBadge.foreground": "#15202b",
+            "statusBar.background": "#61ffca",
+            "statusBar.foreground": "#15202b",
+            "statusBarItem.hoverBackground": "#2effb9",
+            "titleBar.activeBackground": "#61ffca",
+            "titleBar.activeForeground": "#15202b",
+            "titleBar.inactiveBackground": "#61ffca99",
+            "titleBar.inactiveForeground": "#15202b99"
+        },
+        "peacock.color": "#61ffca",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.configuration.updateBuildConfiguration": "interactive"
+    }
 }
