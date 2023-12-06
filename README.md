@@ -4,6 +4,7 @@ This a simple repository to store projects done just to practice programming and
 ## TO-DO
 - [ ] **Vue webapp with a complete REST Java server:**
     > Simple web handled with vue.js and making requests to a REST Java server.
+    
 - [ ] **To-Do List Application:**
     > Create a console-based or GUI-based to-do list application where users can add tasks, mark them as completed, and remove tasks. You can implement features like priority levels, due dates, and sorting.
 

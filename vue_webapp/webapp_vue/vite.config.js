@@ -12,5 +12,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // additionalData: `@import url('.src/assets/aura-colors.scss');`,
+        includePaths: ["src/assets"]
+        // additionalData: `$injectedColor: blue;`,
+      }
+    },
   }
 })
