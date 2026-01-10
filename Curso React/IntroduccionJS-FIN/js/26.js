@@ -14,6 +14,7 @@ const url = 'https://jsonplaceholder.typicode.com/comments'
 const consultarAPI = async () => {
     try {
         const response = await fetch(url)
+        console.log(response.json());
         if(!response.ok) {
             throw new Error('Hubo un error...')
         }

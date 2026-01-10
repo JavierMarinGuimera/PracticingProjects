@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "Curso React/Proyects/01 - GuitarLA"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#524a7e7f",
+			"activityBar.activeBorder": "#281a18",
+			"activityBar.background": "#524a7e7f",
+			"activityBar.foreground": "#e7e7e7",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#281a18",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"statusBar.background": "#3d375e7f",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#524a7e7f",
+			"titleBar.activeBackground": "#3d375e7f",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#3d375e99",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "3d375e7f"
+	}
+}
