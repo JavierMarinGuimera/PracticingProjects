@@ -4,6 +4,13 @@ import java.util.HashMap;
 
 public class Main {
 
+    public static void main(String[] args) {
+        String input = "ADOBECODEBANC";
+        String target = "ABC";
+        String shortestSubsequence = findShortestSubsequence(input, target);
+        System.out.println("Shortest Subsequence: " + shortestSubsequence);
+    }
+
     public static String findShortestSubsequence(String input, String target) {
         if (input == null || target == null || input.length() < target.length()) {
             return "";
@@ -53,12 +60,5 @@ public class Main {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        String input = "ADOBECODEBANC";
-        String target = "ABC";
-        String shortestSubsequence = findShortestSubsequence(input, target);
-        System.out.println("Shortest Subsequence: " + shortestSubsequence);
     }
 }
