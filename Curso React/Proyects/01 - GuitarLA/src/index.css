@@ -5,6 +5,13 @@
 
 .btn-dark {
   text-transform: uppercase;
+  padding-left: 0.4rem !important;
+  padding-right: 0.4rem !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+  border-radius: 6px 6px !important;
 }
 
 .carrito {
@@ -255,6 +262,7 @@ button {
 button,
 [type=button] {
   -webkit-appearance: button;
+  appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled) {
@@ -299,6 +307,7 @@ button:not(:disabled),
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
+  appearance: button;
 }
 
 .display-2 {
@@ -754,8 +763,6 @@ button:not(:disabled),
   }
 }
 .header {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header.jpg");
-  /** TODO: Eliminar la sig linea **/
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header.jpg");
   background-position: 50%;
   background-size: cover;
