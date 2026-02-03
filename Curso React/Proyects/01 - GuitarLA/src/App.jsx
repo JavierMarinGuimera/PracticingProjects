@@ -4,8 +4,14 @@ import Guitar from "./Components/Guitar.jsx";
 import { db } from "./data/db.js";
 
 export default function App() {
-  const [data, setData] = React.useState(db);
-  const [cart, setCart] = React.useState([]);
+
+  const initialCart = () => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  }
+
+  const [data] = React.useState(db);
+  const [cart, setCart] = React.useState(initialCart());
 
   function addToCart(item) {
     const alreadyInCart = cart.find((product) => product.id === item.id);
@@ -38,13 +44,6 @@ export default function App() {
   function saveToLocalStorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
-
-  React.useEffect(() => {
-    const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
-    }
-  }, []);
 
   React.useEffect(() => {
     saveToLocalStorage();
