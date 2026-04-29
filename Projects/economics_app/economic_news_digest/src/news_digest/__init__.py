@@ -1,0 +1,1 @@
+"""Economic RSS digest package."""
