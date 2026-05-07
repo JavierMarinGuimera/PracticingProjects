@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
               <span className="flex size-9 items-center justify-center rounded-xl bg-white text-sm font-bold text-neutral-950">
-                R
+                Y
               </span>
               <span className="font-semibold tracking-tight">{company.legalName}</span>
             </Link>

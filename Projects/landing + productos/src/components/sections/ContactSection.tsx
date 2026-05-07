@@ -33,7 +33,7 @@ export function ContactSection() {
                   icon={<Phone size={20} aria-hidden="true" />}
                 />
                 <ContactLink
-                  href={getWhatsAppHref("Hello Reman, I would like product information.")}
+                  href={getWhatsAppHref("Hello your_site, I would like product information.")}
                   label="WhatsApp"
                   value={company.whatsappDisplay}
                   icon={<MessageCircle size={20} aria-hidden="true" />}

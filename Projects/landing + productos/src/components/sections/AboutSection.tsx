@@ -38,7 +38,7 @@ export function AboutSection() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="text-lg leading-8 text-neutral-600">
-              Reman presents industrial products clearly, helps buyers compare options quickly,
+              your_site presents industrial products clearly, helps buyers compare options quickly,
               and turns interest into direct conversations. The website is intentionally not an
               ecommerce store because these products deserve consultation, sizing, and support.
             </p>

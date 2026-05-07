@@ -20,7 +20,7 @@ export function CTASection() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Button
-                href={getWhatsAppHref("Hello Reman, I would like help choosing a product.")}
+                href={getWhatsAppHref("Hello your_site, I would like help choosing a product.")}
                 target="_blank"
                 rel="noreferrer"
                 variant="whatsapp"

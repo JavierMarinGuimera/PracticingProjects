@@ -40,7 +40,7 @@ export function HeroSection() {
               Call now
             </Button>
             <Button
-              href={getWhatsAppHref("Hello Reman, I would like product information.")}
+              href={getWhatsAppHref("Hello your_site, I would like product information.")}
               target="_blank"
               rel="noreferrer"
               variant="whatsapp"

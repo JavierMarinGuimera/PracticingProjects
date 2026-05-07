@@ -14,7 +14,7 @@ export function ContactForm() {
     const companyName = String(formData.get("company") || "");
     const message = String(formData.get("message") || "");
     const inquiry = [
-      "Hello Reman, I would like to request information.",
+      "Hello your_site, I would like to request information.",
       name ? `Name: ${name}` : "",
       companyName ? `Company: ${companyName}` : "",
       message ? `Message: ${message}` : "",

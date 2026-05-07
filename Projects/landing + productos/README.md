@@ -1,4 +1,4 @@
-# Reman Company Catalog Website
+# your_site Company Catalog Website
 
 Modern company presentation and product catalog template built with Next.js, TypeScript, TailwindCSS, Framer Motion, and Lucide React.
 
