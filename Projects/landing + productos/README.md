@@ -57,7 +57,7 @@ Add a new object to `src/data/products.ts`:
   title: "New Product Name",
   category: "Automation",
   description: "Short, sales-ready product description.",
-  image: "https://images.unsplash.com/...",
+  image: "/images/new-product-id.jpg",
   imageAlt: "Clear description of the product image.",
 }
 ```

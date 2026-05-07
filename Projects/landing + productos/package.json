@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/copy-public-to-out.mjs",
     "start": "next start",
     "lint": "eslint"
   },

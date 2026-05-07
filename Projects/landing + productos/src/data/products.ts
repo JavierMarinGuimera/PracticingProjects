@@ -8,8 +8,7 @@ export const products: Product[] = [
     category: "Automation",
     description:
       "A configurable automation cell for handling repetitive line movements with consistent throughput and reduced operator fatigue.",
-    image:
-      "https://images.unsplash.com/photo-1764835994645-3faa2c40f708?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+    image: "/images/flowline-automation-cell.jpg",
     imageAlt: "Industrial automation machinery operating inside a large factory.",
     featured: true,
   },
@@ -19,8 +18,7 @@ export const products: Product[] = [
     category: "Processing",
     description:
       "Stainless process distribution for facilities that require clean routing, high durability, and easy service access.",
-    image:
-      "https://images.unsplash.com/photo-1765218933298-dc55fdfb517a?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+    image: "/images/inox-process-manifold.jpg",
     imageAlt: "Stainless steel industrial pipes and process machinery.",
     featured: true,
   },
@@ -30,8 +28,7 @@ export const products: Product[] = [
     category: "Storage",
     description:
       "Dense storage infrastructure for parts, consumables, and finished goods with clear organization and fast retrieval.",
-    image:
-      "https://images.unsplash.com/photo-1684695749267-233af13276d0?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+    image: "/images/modular-storage-system.jpg",
     imageAlt: "Organized industrial warehouse with shelving and inventory boxes.",
     featured: true,
   },
@@ -41,8 +38,7 @@ export const products: Product[] = [
     category: "Automation",
     description:
       "Roller and belt transfer modules designed for smooth material movement across packaging and logistics workflows.",
-    image:
-      "https://images.unsplash.com/photo-1684695747561-9372850cf165?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+    image: "/images/conveyor-transfer-suite.jpg",
     imageAlt: "Conveyor system inside an industrial warehouse.",
   },
   {
@@ -51,8 +47,7 @@ export const products: Product[] = [
     category: "Control",
     description:
       "Control and monitoring assemblies built for simple diagnostics, stable operation, and fast maintenance access.",
-    image:
-      "https://images.unsplash.com/photo-1759159091682-3b98f4759367?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+    image: "/images/precision-control-panel.jpg",
     imageAlt: "Close up of industrial machinery with dials and mechanical controls.",
   },
   {
@@ -61,8 +56,7 @@ export const products: Product[] = [
     category: "Processing",
     description:
       "A ready-to-spec pipe and valve kit for production environments where clean installation and serviceability matter.",
-    image:
-      "https://images.unsplash.com/photo-1765218933298-dc55fdfb517a?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+    image: "/images/inox-process-manifold.jpg",
     imageAlt: "Polished stainless process piping in a modern facility.",
   },
 ];
