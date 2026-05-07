@@ -4,13 +4,14 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FeaturedProductsSection } from "@/components/sections/FeaturedProductsSection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ServiceCategoriesSection } from "@/components/sections/ServiceCategoriesSection";
 import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Industrial Product Catalog and Sales Support",
+  title: "Reparación técnica automotriz en Barcelona",
   description:
-    "Premium company website and industrial product catalog with direct phone, WhatsApp, and request information CTAs.",
+    "Reparación de turbos, ABS, mecatrónica DSG, centralitas, dirección eléctrica y otros componentes técnicos con consulta por WhatsApp.",
 });
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
+      <ServiceCategoriesSection />
       <WhyChooseUsSection />
       <FeaturedProductsSection />
       <CTASection />

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { productCategories } from "@/data/categories";
 import { products } from "@/data/products";
@@ -24,14 +25,14 @@ export function ProductsCatalogSection() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
-              Product catalog
+              Catálogo de servicios
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-neutral-950 sm:text-6xl">
-              Explore industrial products built for quote-ready conversations.
+              Reparaciones técnicas para diagnóstico y consulta.
             </h1>
             <p className="mt-5 text-lg leading-8 text-neutral-600">
-              Filter by category, compare the essentials, and request more information directly
-              through WhatsApp. No cart, no checkout, no account required.
+              Filtra por categoría, compara servicios y solicita información por WhatsApp. No hay
+              carrito, checkout ni compra online: es un catálogo para generar consultas técnicas.
             </p>
           </div>
           <CategoryFilter
@@ -40,6 +41,18 @@ export function ProductsCatalogSection() {
             onChange={setActiveCategory}
           />
         </div>
+
+        <nav aria-label="Páginas SEO de servicios" className="mt-8 flex flex-wrap gap-2">
+          {productCategories.map((category) => (
+            <Link
+              key={category.value}
+              href={`/${category.value}`}
+              className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:text-neutral-950"
+            >
+              {category.label}
+            </Link>
+          ))}
+        </nav>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProducts.map((product, index) => (

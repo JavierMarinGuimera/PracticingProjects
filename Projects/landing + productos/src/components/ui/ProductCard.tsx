@@ -18,7 +18,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
       </div>
       <div className="flex flex-1 flex-col p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700">
-          {product.category}
+          {product.categoryLabel}
         </p>
         <h3 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">
           {product.title}
@@ -29,9 +29,9 @@ export function ProductCard({ product, priority = false }: { product: Product; p
           target="_blank"
           rel="noreferrer"
           className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950"
-          aria-label={`Request information about ${product.title} on WhatsApp`}
+          aria-label={`Solicitar información sobre ${product.title} por WhatsApp`}
         >
-          Request info
+          Consultar
           <ArrowUpRight size={16} aria-hidden="true" />
         </a>
       </div>

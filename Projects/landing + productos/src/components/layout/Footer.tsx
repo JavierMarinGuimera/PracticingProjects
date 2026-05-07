@@ -23,7 +23,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold">Pages</h2>
+            <h2 className="text-sm font-semibold">Páginas</h2>
             <nav className="mt-4 grid gap-3" aria-label="Footer navigation">
               {navigation.map((item) => (
                 <Link
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold">Contact</h2>
+            <h2 className="text-sm font-semibold">Contacto</h2>
             <div className="mt-4 grid gap-3 text-sm text-white/65">
               <a href={getTelHref()} className="flex items-center gap-2 transition hover:text-white">
                 <Phone size={16} aria-hidden="true" />
@@ -61,7 +61,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
-          <p>Reusable Next.js catalog template.</p>
+          <p>Catálogo técnico orientado a leads.</p>
         </div>
       </Container>
     </footer>

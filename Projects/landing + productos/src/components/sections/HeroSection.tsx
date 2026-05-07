@@ -13,7 +13,7 @@ export function HeroSection() {
     <section className="relative isolate flex min-h-[88svh] items-end overflow-hidden bg-neutral-950 py-16 sm:py-20">
       <Image
         src={heroImage}
-        alt="Modern industrial production machinery in a bright factory."
+        alt="Taller técnico de reparación automotriz con componentes en diagnóstico."
         fill
         priority
         sizes="100vw"
@@ -28,35 +28,36 @@ export function HeroSection() {
             {company.legalName}
           </p>
           <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Industrial products with premium service behind every spec.
+            Reparación técnica automotriz con diagnóstico especializado.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-            Explore a curated catalog of production, storage, processing, and control systems.
-            No cart. No checkout. Just expert guidance and fast sales support.
+            Consulta servicios de reparación para turbos, ABS, DSG, centralitas, dirección
+            eléctrica y otros componentes. Sin ecommerce: diagnóstico, orientación y contacto
+            directo por WhatsApp.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button href={getTelHref()} variant="primary" icon={<Phone size={18} aria-hidden="true" />}>
-              Call now
+              Llamar ahora
             </Button>
             <Button
-              href={getWhatsAppHref("Hello your_site, I would like product information.")}
+              href={getWhatsAppHref("Hola your_site, quiero información sobre una reparación.")}
               target="_blank"
               rel="noreferrer"
               variant="whatsapp"
               icon={<MessageCircle size={18} aria-hidden="true" />}
             >
-              Contact on WhatsApp
+              Consultar por WhatsApp
             </Button>
             <Button href="#contact" variant="secondary" icon={<ArrowRight size={18} aria-hidden="true" />}>
-              Request information
+              Solicitar información
             </Button>
           </div>
 
           <div className="mt-12 grid max-w-2xl grid-cols-1 gap-5 sm:grid-cols-3">
-            <StatCard value="24h" label="Typical response window" />
-            <StatCard value="120+" label="Products configured yearly" />
-            <StatCard value="4" label="Core industrial categories" />
+            <StatCard value="24h" label="Respuesta habitual" />
+            <StatCard value="120+" label="Reparaciones gestionadas" />
+            <StatCard value="8" label="Categorías SEO" />
           </div>
         </div>
       </Container>

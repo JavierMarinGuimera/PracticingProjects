@@ -15,25 +15,25 @@ export function ContactSection() {
           <Reveal>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
-                Contact
+                Contacto
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
-                Talk to a product specialist.
+                Habla con un técnico especialista.
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                Call, message us on WhatsApp, or send a short request. The form opens a prepared
-                WhatsApp inquiry so your sales team can respond without a backend integration.
+                Llama, escribe por WhatsApp o envía una consulta breve. El formulario prepara un
+                mensaje para que podamos revisar síntomas, referencia y códigos de avería.
               </p>
 
               <div className="mt-8 grid gap-3">
                 <ContactLink
                   href={getTelHref()}
-                  label="Phone"
+                  label="Teléfono"
                   value={company.phoneDisplay}
                   icon={<Phone size={20} aria-hidden="true" />}
                 />
                 <ContactLink
-                  href={getWhatsAppHref("Hello your_site, I would like product information.")}
+                  href={getWhatsAppHref("Hola your_site, quiero información sobre una reparación.")}
                   label="WhatsApp"
                   value={company.whatsappDisplay}
                   icon={<MessageCircle size={20} aria-hidden="true" />}
@@ -49,7 +49,7 @@ export function ContactSection() {
                     <MapPin size={20} aria-hidden="true" />
                   </span>
                   <span>
-                    <span className="block text-sm text-neutral-500">Visit</span>
+                    <span className="block text-sm text-neutral-500">Zona</span>
                     <span className="block text-base font-semibold text-neutral-950">
                       {company.address}
                     </span>

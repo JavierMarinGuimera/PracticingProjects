@@ -5,23 +5,23 @@ import { Section } from "@/components/ui/Section";
 
 const reasons = [
   {
-    title: "Premium catalog experience",
-    description: "Clean browsing, sharp product hierarchy, and fast paths to inquiry.",
+    title: "Arquitectura SEO clara",
+    description: "Cada servicio tiene URL, contenido, FAQ, schema y enlaces internos.",
     icon: Sparkles,
   },
   {
-    title: "Consultative support",
-    description: "Customers can reach the team before buying the wrong component.",
+    title: "Soporte consultivo",
+    description: "El cliente consulta antes de reparar, enviar o sustituir un componente.",
     icon: Headphones,
   },
   {
-    title: "Reliable product framing",
-    description: "Every product card is designed to explain value without adding checkout noise.",
+    title: "Catálogo sin ecommerce",
+    description: "Las tarjetas explican servicios y llevan a contacto, no a checkout.",
     icon: ShieldCheck,
   },
   {
-    title: "Fast customer action",
-    description: "Phone, WhatsApp, and form CTAs are available at every high-intent moment.",
+    title: "Conversión rápida",
+    description: "Teléfono, WhatsApp y formulario aparecen en momentos de alta intención.",
     icon: Clock3,
   },
 ];
@@ -32,14 +32,14 @@ export function WhyChooseUsSection() {
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200">
-            Why choose us
+            Por qué este enfoque
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
-            Minimal browsing. Maximum buying confidence.
+            Autoridad por categoría. Conversión por contacto.
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/65">
-            Built for companies that sell considered products and need more qualified leads,
-            not abandoned carts.
+            Diseñado para posicionar búsquedas de reparación técnica local y convertirlas en leads,
+            sin crear páginas finas para cada referencia.
           </p>
         </div>
 

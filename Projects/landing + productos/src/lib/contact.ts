@@ -9,5 +9,5 @@ export function getWhatsAppHref(message: string, phone = company.whatsappNumber)
 }
 
 export function getProductInquiryMessage(productName: string) {
-  return `Hello your_site, I would like more information about ${productName}.`;
+  return `Hola your_site, quiero información sobre ${productName}.`;
 }

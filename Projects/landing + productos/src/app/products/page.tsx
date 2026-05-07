@@ -3,9 +3,9 @@ import { ProductsCatalogSection } from "@/components/sections/ProductsCatalogSec
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Products",
+  title: "Catálogo de servicios de reparación automotriz",
   description:
-    "Browse your_site industrial products by category and request information by WhatsApp or phone.",
+    "Consulta servicios técnicos de reparación automotriz por categoría: turbos, ABS, DSG, centralitas, dirección eléctrica, suspensión y compresores.",
   path: "/products",
 });
 

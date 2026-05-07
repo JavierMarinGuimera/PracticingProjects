@@ -5,18 +5,18 @@ import { Section } from "@/components/ui/Section";
 
 const highlights = [
   {
-    title: "Specification-first sales",
-    description: "We help teams choose the right product before a quote ever leaves the inbox.",
+    title: "Diagnóstico antes de sustituir",
+    description: "Revisamos síntomas, referencias y errores antes de proponer una reparación.",
     icon: BadgeCheck,
   },
   {
-    title: "Built for production teams",
-    description: "The catalog is structured around real operational needs, not online shopping flows.",
+    title: "Pensado para talleres",
+    description: "La arquitectura prioriza servicios técnicos, no compras online ni fichas por SKU.",
     icon: Factory,
   },
   {
-    title: "Fast lead response",
-    description: "Phone and WhatsApp CTAs keep high-intent customers close to the sales team.",
+    title: "Respuesta directa",
+    description: "WhatsApp y teléfono mantienen cerca las consultas con alta intención de reparación.",
     icon: Gauge,
   },
 ];
@@ -29,18 +29,18 @@ export function AboutSection() {
           <Reveal>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
-                About us
+                Sobre nosotros
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
-                A modern sales presence for technical products.
+                Un catálogo técnico para generar consultas cualificadas.
               </h2>
             </div>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="text-lg leading-8 text-neutral-600">
-              your_site presents industrial products clearly, helps buyers compare options quickly,
-              and turns interest into direct conversations. The website is intentionally not an
-              ecommerce store because these products deserve consultation, sizing, and support.
+              your_site organiza servicios de reparación automotriz por categorías SEO, ayuda a
+              identificar averías frecuentes y convierte la intención de búsqueda en conversaciones
+              directas. No es una tienda online: cada reparación requiere diagnóstico técnico.
             </p>
           </Reveal>
         </div>

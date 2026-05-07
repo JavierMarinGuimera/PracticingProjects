@@ -5,6 +5,6 @@ export const siteConfig = {
   shortName: company.name,
   url: "https://your_site.example",
   description:
-    "Modern industrial product catalog and lead generation website for your_site Industrial Systems.",
+    "Servicio técnico de reparación automotriz con catálogo de categorías, diagnóstico especializado y contacto por WhatsApp.",
   ogImage: "/images/flowline-automation-cell.jpg",
 };

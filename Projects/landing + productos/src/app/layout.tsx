@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         alt: siteConfig.name,
       },
     ],
-    locale: "en_US",
+    locale: "es_ES",
     type: "website",
   },
   twitter: {
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="es" className="h-full antialiased">
       <body className="flex min-h-full flex-col bg-white text-neutral-950">
         <Navbar />
         <main className="flex-1">{children}</main>

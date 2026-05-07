@@ -41,7 +41,7 @@ export function Navbar() {
             className="inline-flex min-h-10 items-center gap-2 rounded-full bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
           >
             <Phone size={16} aria-hidden="true" />
-            Call now
+            Llamar
           </a>
         </div>
 

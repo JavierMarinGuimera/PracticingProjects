@@ -4,28 +4,32 @@ import { cn } from "@/lib/utils";
 import type { ProductCategory } from "@/types/product";
 
 export type ActiveCategory = ProductCategory | "All";
+export type CategoryFilterOption = {
+  label: string;
+  value: ProductCategory;
+};
 
 export function CategoryFilter({
   categories,
   activeCategory,
   onChange,
 }: {
-  categories: ProductCategory[];
+  categories: CategoryFilterOption[];
   activeCategory: ActiveCategory;
   onChange: (category: ActiveCategory) => void;
 }) {
-  const options: ActiveCategory[] = ["All", ...categories];
+  const options = [{ label: "Todos", value: "All" as const }, ...categories];
 
   return (
     <div className="flex flex-wrap gap-2" aria-label="Product categories">
       {options.map((category) => {
-        const active = category === activeCategory;
+        const active = category.value === activeCategory;
 
         return (
           <button
-            key={category}
+            key={category.value}
             type="button"
-            onClick={() => onChange(category)}
+            onClick={() => onChange(category.value)}
             className={cn(
               "min-h-11 rounded-full border px-4 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950",
               active
@@ -34,7 +38,7 @@ export function CategoryFilter({
             )}
             aria-pressed={active}
           >
-            {category}
+            {category.label}
           </button>
         );
       })}

@@ -12,24 +12,24 @@ export function CTASection() {
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200">
-                Ready to specify?
+                ¿Tienes una avería concreta?
               </p>
               <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-5xl">
-                Send us your requirement and we will guide the next step.
+                Envíanos síntomas, referencia o códigos y te orientamos.
               </h2>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Button
-                href={getWhatsAppHref("Hello your_site, I would like help choosing a product.")}
+                href={getWhatsAppHref("Hola your_site, necesito ayuda con una reparación.")}
                 target="_blank"
                 rel="noreferrer"
                 variant="whatsapp"
                 icon={<MessageCircle size={18} aria-hidden="true" />}
               >
-                WhatsApp sales
+                WhatsApp
               </Button>
               <Button href="#contact" variant="secondary" icon={<ArrowRight size={18} aria-hidden="true" />}>
-                Request information
+                Solicitar información
               </Button>
             </div>
           </div>

@@ -31,7 +31,7 @@ export function createPageMetadata({
           alt: siteConfig.name,
         },
       ],
-      locale: "en_US",
+      locale: "es_ES",
       type: "website",
     },
     twitter: {
