@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import logging
 
-from Projects.economics_app.economic_news_digest.src.news_digest.analysis import add_investment_insights
-from Projects.economics_app.economic_news_digest.src.news_digest.config import load_settings
-from Projects.economics_app.economic_news_digest.src.news_digest.emailer import build_email_html, send_email
-from Projects.economics_app.economic_news_digest.src.news_digest.fetch import fetch_all_feeds
-from Projects.economics_app.economic_news_digest.src.news_digest.filtering import deduplicate_articles, filter_relevant_articles
-from Projects.economics_app.economic_news_digest.src.news_digest.processing import group_similar_articles, select_top_articles
+from src.news_digest.analysis import add_investment_insights
+from src.news_digest.config import load_settings
+from src.news_digest.emailer import build_email_html, send_email
+from src.news_digest.fetch import fetch_all_feeds
+from src.news_digest.filtering import deduplicate_articles, filter_relevant_articles
+from src.news_digest.processing import group_similar_articles, select_top_articles
 
 
 logging.basicConfig(
