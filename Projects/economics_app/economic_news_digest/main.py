@@ -2,6 +2,11 @@ from __future__ import annotations
 
 import logging
 
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+
 from src.news_digest.analysis import add_investment_insights
 from src.news_digest.config import load_settings
 from src.news_digest.emailer import build_email_html, send_email
@@ -39,6 +44,11 @@ def main() -> None:
 
     subject = f"Economic news digest: {len(top_articles)} relevant stories"
     html_body = build_email_html(top_articles)
+
+    # Write the HTML digest to index.html
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_body)
+    logging.info("Updated index.html with the latest digest.")
 
     if settings.dry_run:
         logging.info("DRY_RUN is enabled. Email preview:")

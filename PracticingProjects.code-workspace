@@ -1,22 +1,5 @@
 {
-    "folders": [
-        {
-            "name": "tests",
-            "path": "tests"
-        },
-        {
-            "name": "to-do-list",
-            "path": "to-do-list"
-        },
-        {
-            "name": "chat",
-            "path": "chat"
-        },
-        {
-            "name": "vue_webapp",
-            "path": "vue_webapp"
-        }
-    ],
+    "folders": [],
     "settings": {
         "workbench.colorCustomizations": {
             "activityBar.activeBackground": "#94ffdb",
