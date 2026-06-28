@@ -1,5 +1,14 @@
 {
-    "folders": [],
+    "folders": [
+        {
+            "name": "PracticingProjects",
+            "path": "."
+        },
+        {
+            "name": "ClaudeConfig",
+            "path": "F:/Toxics/ClaudeConfig"
+        }
+    ],
     "settings": {
         "workbench.colorCustomizations": {
             "activityBar.activeBackground": "#94ffdb",
