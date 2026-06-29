@@ -1,12 +1,10 @@
 {
     "folders": [
         {
-            "name": "PracticingProjects",
-            "path": "."
+            "path": "Projects/economics_app"
         },
         {
-            "name": "ClaudeConfig",
-            "path": "F:/Toxics/ClaudeConfig"
+            "path": "Projects/landing + productos"
         }
     ],
     "settings": {
