@@ -1,0 +1,28 @@
+# Build artifacts
+target/
+*.class
+*.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Git
+.git/
+.gitignore
+
+# Test reports
+surefire-reports/
+*.xml
+
+# Logs and temp files
+*.log
+/tmp/
+/transcriptions/
+
+# OS files
+.DS_Store
+Thumbs.db

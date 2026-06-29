@@ -1,0 +1,160 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────
+# Audio Transcription Stack
+#
+# Services:
+#   - postgres         : PostgreSQL 16 database
+#   - whisper-service  : Faster-Whisper Python REST API
+#   - app              : Spring Boot 3 + Java 21 API
+#
+# Shared volume: transcription-data
+#   Both app and whisper-service mount this volume so the Java
+#   app can write chunks and pass file paths to the Whisper
+#   service without HTTP file transfers.
+# ─────────────────────────────────────────────────────────────
+
+services:
+
+  # ───────────────────────────────────────────
+  # PostgreSQL
+  # ───────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: transcription-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: transcription_db
+      POSTGRES_USER: transcription_user
+      POSTGRES_PASSWORD: transcription_pass
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U transcription_user -d transcription_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - transcription-net
+
+  # ───────────────────────────────────────────
+  # Faster-Whisper Service
+  # ───────────────────────────────────────────
+  whisper-service:
+    build:
+      context: ./docker/whisper
+      dockerfile: Dockerfile
+    container_name: transcription-whisper
+    restart: unless-stopped
+    environment:
+      WHISPER_MODEL: ${WHISPER_MODEL:-medium}
+      WHISPER_DEVICE: ${WHISPER_DEVICE:-cpu}
+      WHISPER_COMPUTE_TYPE: ${WHISPER_COMPUTE_TYPE:-int8}
+      HOST: 0.0.0.0
+      PORT: 8000
+    volumes:
+      - transcription-data:/app/transcriptions   # shared with app
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
+      start_period: 120s           # Model download/load can take time
+    networks:
+      - transcription-net
+    deploy:
+      resources:
+        limits:
+          memory: 4G               # Adjust based on Whisper model size
+        reservations:
+          memory: 2G
+
+  # ───────────────────────────────────────────
+  # Spring Boot Application
+  # ───────────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: transcription-app
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      whisper-service:
+        condition: service_healthy
+    environment:
+      # Database
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: transcription_db
+      DB_USER: transcription_user
+      DB_PASSWORD: transcription_pass
+
+      # Whisper
+      WHISPER_URL: http://whisper-service:8000
+      WHISPER_MODEL: ${WHISPER_MODEL:-medium}
+      WHISPER_TIMEOUT: 20m
+
+      # Storage — MUST match the shared volume mount path
+      WORK_DIR: /app/transcriptions
+      INPUT_DIR: /app/input
+      OUTPUT_DIR: /app/output
+
+      # FFmpeg (installed in Dockerfile)
+      FFMPEG_PATH: ffmpeg
+      FFPROBE_PATH: ffprobe
+
+      # Processing
+      MAX_RETRIES: 3
+      CHUNK_DURATION_SECONDS: 600
+      MAX_CONCURRENT_JOBS: 5
+
+      # Upload limit
+      MAX_FILE_SIZE_BYTES: 10737418240   # 10 GB
+
+      # Server
+      SERVER_PORT: 8080
+
+      # JVM
+      JAVA_OPTS: >-
+        -XX:+UseZGC
+        -XX:+ZGenerational
+        -XX:MaxRAMPercentage=75.0
+        -Dspring.profiles.active=docker
+    volumes:
+      - transcription-data:/app/transcriptions   # shared with whisper-service
+      - ./input:/app/input                        # drop MP3 files here
+      - ./output:/app/output                      # transcriptions appear here
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - transcription-net
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 512M
+
+volumes:
+  postgres-data:
+    driver: local
+  transcription-data:
+    driver: local
+
+networks:
+  transcription-net:
+    driver: bridge
